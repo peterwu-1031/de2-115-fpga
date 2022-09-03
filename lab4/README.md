@@ -1,4 +1,4 @@
-# Lab bonus - Smith-Waterman (SW) algorithm Guideline
+# Lab 4 - Smith-Waterman (SW) algorithm Guideline
 
 The roadmap of this lab:
 
