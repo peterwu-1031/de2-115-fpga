@@ -1,4 +1,4 @@
-# Lab 4 - Smith-Waterman (SW) algorithm Guideline
+# Lab4 Guideline
 
 The roadmap of this lab:
 
