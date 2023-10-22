@@ -65,6 +65,18 @@ DE2_115 (Game Control)
    ![圖片 6_0](https://github.com/peterwu-1031/de2-115/assets/56571300/9d0b8ac6-ca37-4ba7-996e-93176d67b516)
 # FSM
 ![圖片 7_0](https://github.com/peterwu-1031/de2-115/assets/56571300/a6981605-7fdb-4662-9c31-41e69150d750)
-# Quartus Fitter Summary
-![圖片 8_0](https://github.com/peterwu-1031/de2-115/assets/56571300/3b0715ef-ff13-4a8b-8155-0d3212543330)
-![圖片 9_0](https://github.com/peterwu-1031/de2-115/assets/56571300/75c06fac-c483-42cc-b571-6dc948614ac9)
+# Materials
+DE2-115*2, TRDB-D5M camera, Arduino Nano, SG90 servo motor, Laser module, Dupont wire, Microphone, Speaker, Screen, VGA cable, Power cord.
+# Implementation Methods and Design Details
+**1. Motion Detection:**
+We chose the algorithm shown in the following image for motion detection with the consideration of processing speed and implementation complexity on FPGA.This algorithm reads the image from the camera, then calculates the difference between it and the estimated background Mt. If the absolute value of this difference is less than the variance Vt, the pixel is considered not in motion. In contrast, if the absolute difference is greater than Vt, the pixel is classified as in motion. The values of Mt and Vt are updated based on the magnitude of the difference. After performing the motion detection computation, we also implemented a noise removal step. For each pixel, if all surrounding pixels are classified as not in motion, then this pixel is also considered not in motion. This process reduces noise in the image, enhancing the precision of the motion detection.
+![圖片 10_0](https://github.com/peterwu-1031/de2-115/assets/56571300/8480dcd4-4b60-4a62-9aa0-3b426b50c4dd)
+**2. Index Calculation:**
+To recognize the left-right movement of objects, we horizontally divided the frame into seven segments. We calculated the number of motion-detected pixels in each segment. The segment with the highest number of pixels was selected. If the pixel count in that segment exceeded a predefined threshold, the corresponding movement signal was sent to the game control FPGA board.
+**3. Image_Display:**
+As for image display, we referred to (https://projectf.io/posts/hardware-sprites/) using
+img2mem.py to save each images as separate pixel and palette files. The palette represents the colors used in the image, while the pixel file indicates the index of each pixel's color in the palette. We stored game images with a palette of 16 colors, and each color was represented by 4 bits for each RGB channel. An example is shown below:
+* Palette
+  ![圖片 12_0](https://github.com/peterwu-1031/de2-115/assets/56571300/8d0040e1-db6b-4297-aff5-54efc68914bf)
+* Pixel
+  ![圖片 13_0](https://github.com/peterwu-1031/de2-115/assets/56571300/f8cf3bdc-3c47-475f-a89e-2f4df48031de)
