@@ -57,3 +57,11 @@ DE2_115 (Game Control)
 ├── lfsr.sv (Generate random numbers as input for AudDSP playback speed)
 ├── pictures (store game images)
 └── timer.sv (Display countdown timer on the screen during the game)
+```
+# Block Diagram
+## DE2-115 Camera (Motion Detecter)
+   ![圖片 5](https://github.com/peterwu-1031/de2-115/assets/56571300/38c26dd5-05a7-4639-bfb6-0bfaa90f53d1)
+## Top (Game)
+   ![圖片 6_0](https://github.com/peterwu-1031/de2-115/assets/56571300/9d0b8ac6-ca37-4ba7-996e-93176d67b516)
+# FSM
+![圖片 7_0](https://github.com/peterwu-1031/de2-115/assets/56571300/a6981605-7fdb-4662-9c31-41e69150d750)
