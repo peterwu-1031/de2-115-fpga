@@ -78,4 +78,5 @@ img2mem.py to save each images as separate pixel and palette files. The palette 
 * Palette
   ![圖片 12_0](https://github.com/peterwu-1031/de2-115/assets/56571300/8d0040e1-db6b-4297-aff5-54efc68914bf)
 * Pixel
-  ![圖片 13_0](https://github.com/peterwu-1031/de2-115/assets/56571300/f8cf3bdc-3c47-475f-a89e-2f4df48031de)
+  ![圖片 13_0](https://github.com/peterwu-1031/de2-115/assets/56571300/f8cf3bdc-3c47-475f-a89e-2f4df48031de) <br>
+A pixel value of 1 (indicated by the red box) represents that the color of this pixel is the first color in the palette file, which is ACC. Likely, a pixel value of 5 (indicated by the green box) corresponds to the fifth color in the palette file, which is 9BD. We stored the smaller palette file in ROM with smaller capacity, while the larger pixel file was stored in Block RAM with larger capacity. This design choice helped reduce latency and memory usage. The design of storing images directly in the FPGA eliminated the need for a computer host in our gaming device. This setup allows the game to be executed anywhere without reliance on a computer host, making it closer to the real gaming environment.
