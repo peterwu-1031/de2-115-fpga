@@ -1,6 +1,6 @@
-## DEMO Video
+# DEMO Video
 https://www.youtube.com/watch?v=20aysfmDwVc&t=307s
-## Structure
+# Structure
 ```
 DE2_115_CAMERA (Motion Detection)
 ├── CCD_Capture.v(Capture camera frames)
