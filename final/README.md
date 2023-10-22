@@ -66,4 +66,5 @@ DE2_115 (Game Control)
 # FSM
 ![圖片 7_0](https://github.com/peterwu-1031/de2-115/assets/56571300/a6981605-7fdb-4662-9c31-41e69150d750)
 # Quartus Fitter Summary
-/Users/yuchengwu/Downloads/圖片 10_0.png
+![圖片 8_0](https://github.com/peterwu-1031/de2-115/assets/56571300/3b0715ef-ff13-4a8b-8155-0d3212543330)
+![圖片 9_0](https://github.com/peterwu-1031/de2-115/assets/56571300/75c06fac-c483-42cc-b571-6dc948614ac9)
