@@ -1,5 +1,5 @@
 # Table of Contents
-### Lab1:  Random Number Displayer.
+### Lab1:  Random Number Generator.
 ### Lab2:  RSA256 Decoder.
 ### Lab3:  Audio Recording and Playing.
 ### Lab4:  Smith-Waterman Algorithm for Short-Read Mapping.
